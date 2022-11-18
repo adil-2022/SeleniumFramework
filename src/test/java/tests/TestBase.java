@@ -60,6 +60,12 @@ public class TestBase extends AbstractTestNGCucumberTests
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/drivers/geckodriver.exe");
 			driver = new FirefoxDriver(firefoxOption()); 
 		}
+		else if (browserName.equalsIgnoreCase("chrome-headless")) {
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/drivers/chromedriver.exe");
+			ChromeOptions options = new ChromeOptions();
+			options.setBinary("C:/Program Files/Google/Chrome/Application/chrome.exe");
+			options.addArguments("--headless", "--window-size=1920,1200");
+			driver = new ChromeDriver(options);
 
 		//else if (browserName.equalsIgnoreCase("ie")) 
 		//{
