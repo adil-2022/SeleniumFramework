@@ -61,15 +61,15 @@ public class TestBase extends AbstractTestNGCucumberTests
 			driver = new FirefoxDriver(firefoxOption()); 
 		}
 
-		else if (browserName.equalsIgnoreCase("ie")) 
-		{
-			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"/drivers/IEDriverServer.exe");
-			driver = new InternetExplorerDriver(); 
-		}
+		//else if (browserName.equalsIgnoreCase("ie")) 
+		//{
+		//	System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"/drivers/IEDriverServer.exe");
+		//	driver = new InternetExplorerDriver(); 
+		//}
 
-		else if (browserName.equalsIgnoreCase("safari")) {
-			driver = new SafariDriver(); 
-		}
+		//else if (browserName.equalsIgnoreCase("safari")) {
+		//	driver = new SafariDriver(); 
+		//}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 		driver.navigate().to("http://demo.nopcommerce.com/");
