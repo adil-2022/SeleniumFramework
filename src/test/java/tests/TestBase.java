@@ -66,6 +66,7 @@ public class TestBase extends AbstractTestNGCucumberTests
 			options.setBinary("C:/Program Files/Google/Chrome/Application/chrome.exe");
 			options.addArguments("--headless", "--window-size=1920,1200");
 			driver = new ChromeDriver(options);
+		}
 
 		//else if (browserName.equalsIgnoreCase("ie")) 
 		//{
